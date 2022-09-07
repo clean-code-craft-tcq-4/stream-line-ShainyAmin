@@ -6,9 +6,7 @@ const senderFetchReadings = require('./../src/sender/sender');
 
 describe('Test sensor readings random generator', () => {
   let readings = sensorReadings.fetchReadings();
-  it('should exists', () => {
-      expect(sensorReadings.fetchReadings()).to.exist;
-  });
+ 
   it('should return sensor value', () => {
 
       expect(readings.length).to.deep.equals(50);
