@@ -5,7 +5,7 @@ const sensorReadings = require('./../src/sender/sensorReadings');
 const senderFetchReadings = require('./../src/sender/sender');
 
 describe('Test sensor readings random generator', () => {
-  let readings = sensorReadings.fetchReadings();
+  let readings = sensorReadings.fetchReadings;
  
   it('should return sensor value', () => {
 
