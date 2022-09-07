@@ -3,8 +3,8 @@ const sensorReadings = require('./sensorReadings');
 
 
 function getSenderReadings() {
-console.log(sensorReadings)
+console.log(sensorReadings);
 
 }
 
- getSenderReadings();
+module.exports = { getSenderReadings }
