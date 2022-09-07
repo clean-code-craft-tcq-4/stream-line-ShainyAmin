@@ -30,7 +30,7 @@ describe('sensor SOC should exists', () => {
 
 describe('Sender data should exists', () => {
   it('should exists', () => {
-      expect(senderFetchReadings.fetchReadings).to.exist;
+      expect(senderFetchReadings.getSenderReadings).to.exist;
   });
 
 });
