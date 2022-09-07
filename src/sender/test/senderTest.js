@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 
 const sensorReadings = require('./../sensorReadings');
-
+const senderFetchReadings = require('./../sender');
 
 
 describe('Test sensor readings random generator', () => {
@@ -25,6 +25,13 @@ describe(' sensor temperature should exists', () => {
 describe('sensor SOC should exists', () => {
   it('should exists', () => {
       expect(sensorReadings.senderSOCReadings).to.exist;
+  });
+
+});
+
+describe('Sender data should exists', () => {
+  it('should exists', () => {
+      expect(senderFetchReadings.fetchReadings).to.exist;
   });
 
 });
