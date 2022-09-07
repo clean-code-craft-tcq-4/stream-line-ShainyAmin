@@ -1,8 +1,8 @@
 const { expect } = require('chai');
 
-const sensorReadings = require('./../sensorReadings');
-const senderFetchReadings = require('./../sender');
 
+const sensorReadings = require('./../src/sender/sensorReadings');
+const senderFetchReadings = require('./../src/sender/sender');
 
 describe('Test sensor readings random generator', () => {
   let readings = sensorReadings.fetchReadings();
