@@ -10,8 +10,12 @@ function fetchReadings(){
         var r = Math.floor(Math.random() * 100) + 1;
         if(readings.indexOf(r) === -1) readings.push(r);
     }
-  
+
     return readings;
 }
 
-module.exports = {senderTemperatureReadings, senderSOCReadings}
+jsonObject = {
+    'senderTemperatureReadings': senderTemperatureReadings,
+    'senderSOCReadings': senderSOCReadings
+}
+module.exports = {jsonObject}

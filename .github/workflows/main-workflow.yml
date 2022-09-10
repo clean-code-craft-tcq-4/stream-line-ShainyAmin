@@ -10,16 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-        with: 
+        with:
           node-version: '14'
 
       - name: Install Dependncies
         run:  sudo npm install
-      
+
       - name: Lint with eslint
         run: |
           npx eslint --fix .
-          
+
+      - name: Combine Sender and Receiver
+        run: |
+          node src/readStdoutToFile.js | python src/receiver/receiver.py
+
       - name: Run and collect coverage
         run: npx nyc --reporter=html --reporter=text npm run test
 
