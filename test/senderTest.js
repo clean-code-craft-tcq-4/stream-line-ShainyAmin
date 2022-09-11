@@ -7,7 +7,7 @@ const senderFetchReadings = require('./../src/sender/sender');
 describe('Test sensor readings random generator', () => {
   let readings = []
   readings.push(sensorReadings.fetchReadings);
- 
+
   it('should exist sensor value', () => {
 
       expect(readings).to.exist;
@@ -16,14 +16,14 @@ describe('Test sensor readings random generator', () => {
 
 describe(' sensor temperature should exists', () => {
   it('should exists', () => {
-      expect(sensorReadings.senderTemperatureReadings).to.exist;
+      expect(sensorReadings.jsonObject.senderTemperatureReadings).to.exist;
   });
 
 });
 
 describe('sensor SOC should exists', () => {
   it('should exists', () => {
-      expect(sensorReadings.senderSOCReadings).to.exist;
+      expect(sensorReadings.jsonObject.senderSOCReadings).to.exist;
   });
 
 });

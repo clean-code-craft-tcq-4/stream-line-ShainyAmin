@@ -3,8 +3,7 @@ const sensorReadings = require('./sensorReadings');
 
 
 function getSenderReadings() {
-console.log(sensorReadings);
-
+    return(JSON.stringify(sensorReadings));
 }
 
 module.exports = { getSenderReadings }
