@@ -14,7 +14,7 @@ function fetchReadings(){
     return readings;
 }
 
-jsonObject = {
+var jsonObject = {
     'senderTemperatureReadings': senderTemperatureReadings,
     'senderSOCReadings': senderSOCReadings
 }
