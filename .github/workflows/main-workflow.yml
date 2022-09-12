@@ -22,7 +22,7 @@ jobs:
 
       - name: Combine Sender and Receiver
         run: |
-          node src/readStdoutToFile.js | python src/receiver/receiver.py
+          node src/readStdoutToFile.js && python src/receiver/receiver.py
 
       - name: Run and collect coverage
         run: npx nyc --reporter=html --reporter=text npm run test
