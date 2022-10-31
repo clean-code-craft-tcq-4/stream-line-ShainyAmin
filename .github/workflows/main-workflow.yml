@@ -19,6 +19,10 @@ jobs:
       - name: Lint with eslint
         run: |
           npx eslint --fix .
+
+      - name: Combine sender and receiver
+        run: |
+          node src/readStdoutToFile.js && python src/receiver/receiver.py
           
       - name: Run and collect coverage
         run: npx nyc --reporter=html --reporter=text npm run test
